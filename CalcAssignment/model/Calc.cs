@@ -4,14 +4,11 @@ using System.Text;
 
 namespace CalcAssignment.model
 {
-    class Calc
+    public  class Calc
     {
-        public double num1;
-        public double num2;
-
-        public double[] numArray = new double[5];
+      
              
-        public double Multiple (double num1 , double num2)
+        public static double Multiple (double num1 , double num2)
         {
          double multiple= num1 * num2;
             return multiple;
@@ -39,10 +36,10 @@ namespace CalcAssignment.model
         }
         public double substract(double[] numArray)
         {
-            double minus = 0;
-            for (int i = 0; i < numArray.Length; i++)
+            double minus = numArray [0];
+            for (int i = 1; i < numArray.Length; i++)
             {
-                minus = minus- numArray[i];
+                minus = minus- (numArray[i]);
 
             }
             return minus;
